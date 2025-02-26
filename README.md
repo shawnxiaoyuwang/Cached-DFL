@@ -66,7 +66,7 @@ A **cache-based Distributed Federated Learning** framework (experimental) for **
    │   └── utils_cnn.py          # Utility functions for CNN
    |
    ├── examples/
-   │   └── demo.py
+   │   └── demo.py (To be develop)
    │   └── ...
    |
    ├── tests/
@@ -75,7 +75,7 @@ A **cache-based Distributed Federated Learning** framework (experimental) for **
    ├── config.json               # Example config file
    ├── requirements.txt          # Python dependencies
    ├── LICENSE
-   ├── main.py                   # Entry point for running the federated learning pipeline using mpi process
+   ├── main.py                   # Entry point for running the federated learning pipeline using mpi process (to be developed, current you can excute trainer_single.py ot trainer_mpi.py with argparse directly)
    └── README.md
 ```
 * `cachedfl/`: Core Python package containing the main source code.
