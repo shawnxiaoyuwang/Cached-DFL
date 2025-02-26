@@ -90,6 +90,7 @@ A **cache-based Distributed Federated Learning** framework (experimental) for **
 * **Caching Options**: Customize parameters such as cache size or eviction policies.
 * **Distributed Settings**: Simulation on single thread or multiple threads/machines (using mpi)
 # Examples
+# to be developed, current you can excute trainer_single.py ot trainer_mpi.py with argparse directly
    ``` bash
    python examples/demo.py
 ```
