@@ -70,12 +70,12 @@ A **cache-based Distributed Federated Learning** framework (experimental) for **
    │   └── ...
    |
    ├── tests/
-   │   ├── test_trainer.py
+   │   ├── test_trainer.py (To be develop)
    │   └── ...
    ├── config.json               # Example config file
    ├── requirements.txt          # Python dependencies
    ├── LICENSE
-   ├── main.py                   # Entry point for running the federated learning pipeline using mpi process (to be developed, current you can excute trainer_single.py ot trainer_mpi.py with argparse directly)
+   ├── main.py                   # Entry point for running the federated learning pipeline using mpi process (to be developed, currently you can excute trainer_single.py ot trainer_mpi.py with argparse directly)
    └── README.md
 ```
 * `cachedfl/`: Core Python package containing the main source code.
@@ -90,7 +90,7 @@ A **cache-based Distributed Federated Learning** framework (experimental) for **
 * **Caching Options**: Customize parameters such as cache size or eviction policies.
 * **Distributed Settings**: Simulation on single thread or multiple threads/machines (using mpi)
 # Examples
-# to be developed, current you can excute trainer_single.py ot trainer_mpi.py with argparse directly
+## to be developed, currently you can excute trainer_single.py ot trainer_mpi.py with argparse directly
    ``` bash
    python examples/demo.py
 ```
