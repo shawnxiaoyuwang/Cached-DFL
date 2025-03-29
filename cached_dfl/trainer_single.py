@@ -394,13 +394,30 @@ def Decentralized_process(suffix_dir,train_loader,test_loader,num_round,local_ep
         model_before_aggregation = copy.deepcopy(model)
         final_test(model_before_aggregation, acc_global_before_aggregation, class_acc_list_before_aggregation)
 
+        # do model update
+        time_a = time.time()
+        receiver_buffer = {}
+        for seconds in range(args.epoch_time):
+            for a,b in pair[i*args.epoch_time+seconds]: 
+                if distribution == 'area':
+                    if car_type_list[a] == car_type_list[b] or car_type_list[a] == 0 or car_type_list[b] == 0: 
+                        receiver_buffer[a] = b
+                        receiver_buffer[b] = a
+                else: 
+                    receiver_buffer[a] = b
+                    receiver_buffer[b] = a
+        # Then check receiver_buffer, if the model is in the buffer, then do aggregation
+        for key, buffered_model_id in receiver_buffer.items():  
+            model[key].load_state_dict(average_weights([model[key].state_dict(),model_before_training[buffered_model_id].state_dict()],np.array([weights[key],weights[buffered_model_id]])))
+            model[key].to(device)
+
         # Pairwise model exchange
         # pair[i] is a list of (a, b) pairs that meet in round i
-        for (a, b) in pair[i]:
-            weighted_average_process(model[a], model[b],
-                                     np.array([weights[a], weights[b]]))
-            model[a].to(device)
-            model[b].to(device)
+        # for (a, b) in pair[i]:
+        #     weighted_average_process(model[a], model[b],
+        #                              np.array([weights[a], weights[b]]))
+        #     model[a].to(device)
+        #     model[b].to(device)
 
         end_time = time.time()
 
