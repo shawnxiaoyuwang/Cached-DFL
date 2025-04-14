@@ -102,6 +102,6 @@ A **cache-based Distributed Federated Learning** framework (experimental) for **
 * **Libraries/Frameworks**: PyTorch, NumPy, or others as relevant.
 * **Contributors**:  Xiaoyu Wang, New York University
 * **References:**
-  Wang, Xiaoyu, Guojun Xiong, Houwei Cao, Jian Li, and Yong Liu. "Decentralized Federated Learning with Model Caching on Mobile Agents." arXiv preprint arXiv:2408.14001 (2024).
+*  Wang, Xiaoyu, Guojun Xiong, Houwei Cao, Jian Li, and Yong Liu. "Decentralized Federated Learning with Model Caching on Mobile Agents." arXiv preprint arXiv:2408.14001 (2024).
   https://arxiv.org/abs/2408.14001
-  Wang, X., Xiong, G., Cao, H., Li, J., & Liu, Y. (2025). Decentralized Federated Learning with Model Caching on Mobile Agents. Proceedings of the AAAI Conference on Artificial Intelligence, 39(20), 21296-21303. https://doi.org/10.1609/aaai.v39i20.35429
+ * Wang, X., Xiong, G., Cao, H., Li, J., & Liu, Y. (2025). Decentralized Federated Learning with Model Caching on Mobile Agents. Proceedings of the AAAI Conference on Artificial Intelligence, 39(20), 21296-21303. https://doi.org/10.1609/aaai.v39i20.35429
